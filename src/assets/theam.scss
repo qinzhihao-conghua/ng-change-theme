@@ -1,20 +1,20 @@
 $light-color:#f5f5f5 !default;
 $dark-color:#565656 !default;
+
 @mixin bg-color($light-color, $dark-color) {
   [ds-theme="dark"] & {
     background-color: $dark-color;
+
     .child {
-      // 对于设置子组件，元素的样式，根据实际情况设置权重
       background-color: #ccc !important;
     }
   }
+
   [ds-theme="light"] & {
     background-color: $light-color;
-  }
-}
 
-@mixin child-theme($parent-theme) {
-  [ds-child-theme=""] & {
-    background-color: $light-color;
+    .child {
+      background-color: #fff !important;
+    }
   }
 }

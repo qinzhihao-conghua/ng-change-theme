@@ -1,23 +1,29 @@
-@import '../../assets/theam.scss';
+// @import '../../assets/theam.scss';
+
 .header {
   width: 100%;
-  height: 8vh;
+  height: 10vh;
   margin-bottom: 12px;
+
   .content {
     width: 80%;
     height: 100%;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: var(--child-color);
+    // 使用scss的变量需要引入主题样式文件
+    // background-color: $light-color;
+
     .btn {
       width: 100px;
-      height: 40px;
-      margin-top: 15px;
+      height: 5vh;
       border: none;
       background-color: rgb(106, 240, 88);
       color: #fff;
       border-radius: 10px;
       cursor: pointer;
       float: right;
+      margin: 12px;
+
       &:focus {
         outline: none;
       }

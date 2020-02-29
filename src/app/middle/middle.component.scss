@@ -1,13 +1,15 @@
 .middle {
   width: 80%;
-  height: 80vh;
+  height: calc(80vh - 24px);
   margin: 0 auto 12px;
   display: flex;
+
   .middle-left {
     flex: 2.5;
     height: 100%;
     margin-right: 12px;
-    background-color: #fff;
+    background-color: var(--child-color);
+
     .left-content {
       width: 50%;
       height: 50%;
@@ -15,9 +17,10 @@
       background-color: rgb(214, 148, 245);
     }
   }
+
   .middle-right {
     flex: 7.5;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--child-color);
   }
 }

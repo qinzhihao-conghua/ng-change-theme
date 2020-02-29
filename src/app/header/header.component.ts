@@ -9,20 +9,21 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
   theme = 'light';
+  flag = false;
   ngOnInit() {
   }
   /**
-   * 使用localStorage 存储主题的名称
+   * sessionStorage 存储主题的名称
    * theme
    */
-  saveTheme(theme): void {
-    localStorage.setItem(`theme`, theme);
+  saveTheme(theme: string): void {
+    sessionStorage.setItem(`theme`, theme);
   }
   /**
    * 获取主题名称并设置到body
    */
   getTheme(): void {
-    let theme = localStorage.getItem(`theme`);
+    let theme = sessionStorage.getItem(`theme`);
     if (!theme) {
       theme = `dark`;
     }
@@ -42,5 +43,22 @@ export class HeaderComponent implements OnInit {
       this.saveTheme(`dark`);
       this.getTheme();
     }
+  }
+
+  /**
+   * 另一方式，根据实际业务情况更改
+   */
+  changeTheme1(): void {
+    const body = document.getElementsByTagName('body')[0];
+    let resultTheme;
+    if (!this.flag) {
+      resultTheme = JSON.parse(sessionStorage.getItem('change'));
+    } else {
+      resultTheme = JSON.parse(sessionStorage.getItem('base'));
+    }
+    this.flag = !this.flag;
+    console.log(resultTheme);
+    body.style.setProperty('--body-color', resultTheme.bodyColor);
+    body.style.setProperty('--child-color', resultTheme.childColor);
   }
 }
