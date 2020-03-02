@@ -12,9 +12,10 @@
 }
 
 // 方式1
-.fun1 {
-  @include bg-color($light-color, $dark-color);
-}
+// 由于存在!important,在使用方式2时需将方式注释
+// .fun1 {
+//   @include bg-color($light-color, $dark-color);
+// }
 
 .fun2 {
   background-color: var(--body-color);
