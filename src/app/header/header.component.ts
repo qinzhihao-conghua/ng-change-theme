@@ -48,7 +48,7 @@ export class HeaderComponent implements OnInit {
   }
 
   /**
-   * 另一方式，根据实际业务情况更改
+   * 方式二，根据实际业务情况更改
    */
   changeTheme1(): void {
     const body = document.getElementsByTagName('body')[0];

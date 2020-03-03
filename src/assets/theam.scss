@@ -6,7 +6,7 @@ $dark-color:#565656 !default;
     background-color: $dark-color;
 
     .child {
-      background-color: #ccc !important;
+      background-color: #ccc;
     }
   }
 
@@ -14,7 +14,7 @@ $dark-color:#565656 !default;
     background-color: $light-color;
 
     .child {
-      background-color: #fff !important;
+      background-color: #fff;
     }
   }
 }
