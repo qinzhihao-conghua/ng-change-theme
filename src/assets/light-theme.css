@@ -1,0 +1,10 @@
+.fun2 {
+  background-color: #fd0505;
+}
+
+.content.child,
+.middle-left.child,
+.middle-right.child,
+.bottom.child {
+  background-color: rgb(252, 248, 6);
+}

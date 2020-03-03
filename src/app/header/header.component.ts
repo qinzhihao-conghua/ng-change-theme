@@ -10,6 +10,8 @@ export class HeaderComponent implements OnInit {
   constructor() { }
   theme = 'light';
   flag = false;
+  theme3 = 'light';
+  linkDom: HTMLLinkElement;
   ngOnInit() {
   }
   /**
@@ -60,5 +62,23 @@ export class HeaderComponent implements OnInit {
     console.log(resultTheme);
     body.style.setProperty('--body-color', resultTheme.bodyColor);
     body.style.setProperty('--child-color', resultTheme.childColor);
+  }
+
+  /**
+   * 方式三，动态引入css
+   */
+  changeTheme2(): void {
+    if (!this.linkDom) {
+      this.linkDom = document.createElement('link');
+      this.linkDom.rel = 'stylesheet';
+    }
+    if (this.theme3 === 'light') {
+      this.linkDom.href = '../../assets/dark-theme.css';
+      this.theme3 = 'dark';
+    } else {
+      this.linkDom.href = '../../assets/light-theme.css';
+      this.theme3 = 'light';
+    }
+    document.head.appendChild(this.linkDom);
   }
 }
