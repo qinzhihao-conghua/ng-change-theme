@@ -12,7 +12,7 @@
 }
 
 // 方式1
-// 由于存在!important,在使用方式2时需将方式1注释
+// 方式1权重值较高，影响其他方式，故注释
 // .fun1 {
 //   @include bg-color($light-color, $dark-color);
 // }
