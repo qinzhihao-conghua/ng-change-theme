@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
       theme = `dark`;
     }
     const body = document.getElementsByTagName('body')[0];
-    body.setAttribute('ds-theme', theme);
+    body.setAttribute('zh-theme', theme);
     this.theme = theme;
   }
   /**
@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit {
    */
   changeTheme(): void {
     const body = document.getElementsByTagName('body')[0];
-    if (body.getAttribute(`ds-theme`) === 'dark') {
+    if (body.getAttribute(`zh-theme`) === 'dark') {
       this.saveTheme(`light`);
       this.getTheme();
     } else {
